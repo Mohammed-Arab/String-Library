@@ -1,26 +1,22 @@
 ;Name:		Mohammed Arab
 ;Email:		marab065@mtroyal.ca
-;course:	comp2655
-;Assignment:	5
-;Due date:	Dec 7,22
-;Instructor:	Paul
 ;File:		main.s
 ;Purpose:	A string library consisting of 7 subroutines
 ;Details:
 ;		the program makes a string library that consists of 
-;		7 subroutines. StrLen which returns the actual size used of the string
-;		StrMaax returns the max size of the string.
-;		StrCOncat appends the source string into destination string.
+;		7 subroutines. StrLen which returns the actual size used for the string
+;		StrMaax returns the maximum size of the string.
+;		StrCOncat appends the source string to the destination string.
 ;		SubStr extracts a substring from the source and placing
-;		it in the destination string.
-;		StrScan checks for the occurence of a target in the source string.
-;		StrCmp makes a lexicographical coparision of two strings.
-;		StrPrint prints the actual size of string else prints out nothing. 
+;		it is in the destination string.
+;		StrScan checks for the occurrence of a target in the source string.
+;		StrCmp makes a lexicographical comparison of two strings.
+;		StrPrint prints the actual size of string and prints out nothing. 
 
 
 ;----------Register table----------	
 ;	d0:
-;		-output stores the ascii value of char
+;		-output stores the ASCII value of char
 ;		-used as a decrement counter at StrCmp
 ;		-stores the character of the first string in StrCmp
 ;	a0:
@@ -39,11 +35,11 @@
 ;		-stores sum of string1 and string2 actual length
 ;	d4:
 ;		-stores max length of string1 in StrConCat
-;		-stores index increment of target in StrScan
+;		-stores index increment of the target in StrScan
 ;	d5:
-;		-stores actual length of target in StrScan and used for dbra
+;		-stores the actual length of the target in StrScan and used for dbra
 ;	d6:
-;		-stroes the index of occurrence in StrScan
+;		-stores the index of occurrence in StrScan
 ;----------------------------------------------------------------------------
 	xdef	StrLen
 	xdef	StrMax
